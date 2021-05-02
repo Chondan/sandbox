@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:start": "webpack serve --env dev --config ./webpack-config/webpack.config.js",
+    "dev:start": "webpack serve --env mode=dev --config ./webpack-config/webpack.config.js",
     "lint": "eslint src/**",
     "prebuild": "rimraf dist",
-    "build": "cross-env NODE_ENV=production webpack --env prod --config ./webpack-config/webpack.config.js",
-    "build:bundleanalyzer": "yarn build --addons bundleanalyzer",
+    "build": "cross-env NODE_ENV=production webpack --env mode=prod --config ./webpack-config/webpack.config.js",
+    "build:bundleanalyzer": "yarn build --env addons=bundleanalyzer",
     "analyze": "webpack-bundle-analyzer dist/stats.json"
   },
   "dependencies": {

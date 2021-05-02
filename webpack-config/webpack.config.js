@@ -13,14 +13,28 @@ const addons = (/* string | string[] */ addonsArg) => {
     );
 };
 
+const turnEnvToObject = (/* string[] */args) => {
+    const obj = {};
+
+    Array(args).flat(1).forEach(arg => {
+        const [name, val] = arg.split('=');
+        if (name in obj) {
+            obj[name] = [...obj[name], val]
+        } else {
+            obj[name] = [val];
+        }
+    });
+    return obj;
+}
+
 module.exports = () => {
-    const { env, addons: addonsArg } = argv;
+    const { env } = argv;
+    const envObj = turnEnvToObject(env);
+    const { mode, addons: addonsArg } = envObj;
 
-    if (!env) {
-        throw new Error(buildValidations.ERR_NO_ENV_FLAG);
-    }
-
-    const envConfig = require(`./utils/webpack.${env}.js`);
+    if (!env) throw new Error(buildValidations.ERR_NO_ENV_FLAG);
+    
+    const envConfig = require(`./utils/webpack.${mode[0]}.js`);
     const mergedConfig = merge(commonConfig, envConfig, ...addons(addonsArg));
 
     return mergedConfig;
