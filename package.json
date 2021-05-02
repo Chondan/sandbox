@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev:start": "webpack serve --env mode=dev --config ./webpack-config/webpack.config.js",
-    "lint": "eslint '*/**/*.{js,jsx,ts,tsx,css,s[ac]ss}' --quiet",
+    "lint": "eslint */**/*.{js,jsx,ts,tsx,css,s[ac]ss} --quiet",
     "lint:fix": "yarn lint --fix",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --env mode=prod --config ./webpack-config/webpack.config.js",
