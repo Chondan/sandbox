@@ -6,3 +6,5 @@
 - What is a tsconfig.json -> https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 - Use Absolute Paths with React -> https://betterprogramming.pub/use-absolute-paths-with-react-51ced66f119f
     - Need to setup both at `tsconfig.json` and `webpack.common.js`
+- Using ESLint and Prettier in a TypeScript Project -> https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project
+- Using lint-staged, husky, and pre-commit hooks to fail fast and early -> https://codeburst.io/continuous-integration-lint-staged-husky-pre-commit-hook-test-setup-47f8172924fc
