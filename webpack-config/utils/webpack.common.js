@@ -27,7 +27,7 @@ const config = {
         }),
         new BundleAnalyzerPlugin({
             analyzerMode: 'disabled',
-            generateStatsFile: true,
+            generateStatsFile: false,
             statsOptions: { source: false }
         })
     ],
@@ -36,7 +36,7 @@ const config = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                use: ['babel-loader'],
             },
             {
                 test: /\.(ts|tsx)$/,
