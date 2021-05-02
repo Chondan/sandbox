@@ -5,12 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev:start": "webpack serve --env mode=dev --config ./webpack-config/webpack.config.js",
-    "lint": "eslint src",
-    "lint:fix": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet",
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet",
+    "lint:fix": "yarn lint --fix",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --env mode=prod --config ./webpack-config/webpack.config.js",
     "build:bundleanalyzer": "yarn build --env addons=bundleanalyzer",
-    "analyze": "webpack-bundle-analyzer dist/stats.json"
+    "analyze": "webpack-bundle-analyzer dist/stats.json",
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -64,14 +66,9 @@
     "webpack-merge": "^5.7.3",
     "webpack-node-externals": "^3.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint src"
+      "yarn lint --fix"
     ]
   }
 }
