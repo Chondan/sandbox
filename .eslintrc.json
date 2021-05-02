@@ -33,7 +33,7 @@
         "react/prop-types": "off",
         "prettier/prettier": "error"
     },
-    "ignorePatterns": ["webpack-config"],
+    "ignorePatterns": ["*.s*[ca]ss", "webpack-config"],
     "settings": {
         "react": {
             "version": "detect"
