@@ -29,10 +29,11 @@ const turnEnvToObject = (/* string[] */args) => {
 
 module.exports = () => {
     const { env } = argv;
+    if (!env) throw new Error(buildValidations.ERR_NO_ENV_FLAG);
+    
     const envObj = turnEnvToObject(env);
     const { mode, addons: addonsArg } = envObj;
 
-    if (!env) throw new Error(buildValidations.ERR_NO_ENV_FLAG);
     
     const envConfig = require(`./utils/webpack.${mode[0]}.js`);
     const mergedConfig = merge(commonConfig, envConfig, ...addons(addonsArg));
