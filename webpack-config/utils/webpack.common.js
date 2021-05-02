@@ -34,11 +34,23 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js)$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
             },
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: ["ts-loader"],
+            },
+            {
+                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+                use: ["file-loader"],
+            },
         ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.wasm', '.mjs', 'cjs', '.json']
     }
 };
 
