@@ -5,5 +5,5 @@ module.exports = {
     projectRoot: PROJECT_ROOT,
     outputPath: path.join(PROJECT_ROOT, 'dist'),
     appEntry: path.join(PROJECT_ROOT, 'src'),
-    basePathSrc: path.join(PROJECT_ROOT, 'src')
+    basePathSrc: path.join(PROJECT_ROOT, 'src'),
 };

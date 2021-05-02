@@ -4,14 +4,14 @@ const port = process.env.PORT || 3000;
 const config = {
     mode: 'development',
     entry: {
-        app: `${commonPaths.appEntry}/index.js`
+        app: `${commonPaths.appEntry}/index.js`,
     },
     output: {
-        filename: '[name].[hash].js'
+        filename: '[name].[hash].js',
     },
     resolve: {
         alias: {
-        "react-dom": "@hot-loader/react-dom",
+            'react-dom': '@hot-loader/react-dom',
         },
     },
     devtool: 'inline-source-map',
@@ -21,34 +21,32 @@ const config = {
                 test: /\.(s[ac]ss|css)$/,
                 use: [
                     {
-                        loader: 'style-loader'
+                        loader: 'style-loader',
                     },
                     {
                         loader: 'css-loader',
                         options: {
                             modules: true,
-                            sourceMap: true
-                        }
+                            sourceMap: true,
+                        },
                     },
                     {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: true,
-                        }
-                    }
-                ]
-            }
-        ]
+                        },
+                    },
+                ],
+            },
+        ],
     },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ],
+    plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
         host: 'localhost',
         port: port,
         historyApiFallback: true,
         hot: true,
-        open: true
-    }
+        open: true,
+    },
 };
 module.exports = config;

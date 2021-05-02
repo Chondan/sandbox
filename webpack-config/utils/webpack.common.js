@@ -11,25 +11,25 @@ const config = {
     target: 'web',
     optimization: {
         splitChunks: {
-        cacheGroups: {
-            vendor: {
-            chunks: 'initial',
-            test: /[\\/]node_modules[\\/]semantic-ui-([\S]+)[\\/]/,
-            name: 'vendor',
-            enforce: true,
+            cacheGroups: {
+                vendor: {
+                    chunks: 'initial',
+                    test: /[\\/]node_modules[\\/]semantic-ui-([\S]+)[\\/]/,
+                    name: 'vendor',
+                    enforce: true,
+                },
             },
-        },
         },
     },
     plugins: [
         new HtmlWebpackPlugin({
-        template: `public/index.html`
+            template: 'public/index.html',
         }),
         new BundleAnalyzerPlugin({
             analyzerMode: 'disabled',
             generateStatsFile: true,
-            statsOptions: { source: false }
-        })
+            statsOptions: { source: false },
+        }),
     ],
     module: {
         rules: [
@@ -41,20 +41,20 @@ const config = {
             {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
-                use: ["ts-loader"],
+                use: ['ts-loader'],
             },
             {
                 test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-                use: ["file-loader"],
+                use: ['file-loader'],
             },
-        ]
+        ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '.wasm', '.mjs', 'cjs', '.json'],
         alias: {
-            "@src": commonPaths.basePathSrc 
-        }
-    }
+            '@src': commonPaths.basePathSrc,
+        },
+    },
 };
 
 module.exports = config;
