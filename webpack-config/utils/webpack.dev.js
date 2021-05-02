@@ -18,7 +18,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(scss|css)$/,
+                test: /\.(s[ac]ss|css)$/,
                 use: [
                     {
                         loader: 'style-loader'
@@ -26,8 +26,8 @@ const config = {
                     {
                         loader: 'css-loader',
                         options: {
-                        modules: true,
-                        sourceMap: true
+                            modules: true,
+                            sourceMap: true
                         }
                     },
                     {

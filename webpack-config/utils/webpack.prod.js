@@ -11,33 +11,33 @@ const config = {
     devtool: 'source-map',
     module: {
         rules: [
-        {
-            test: /\.(scss|css)$/,
-            use: [
-                {
-                    // We configure 'MiniCssExtractPlugin'              
-                    loader: MiniCssExtractPlugin.loader,
-                }, 
-                {
-                    loader: 'css-loader',
-                    options: {
-                        modules: true,
-                        importLoaders: 1,
-                        sourceMap: true
+            {
+                test: /\.(s[ac]ss|css)$/,
+                use: [
+                    {
+                        // We configure 'MiniCssExtractPlugin'              
+                        loader: MiniCssExtractPlugin.loader,
+                    }, 
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader'
                     }
-                },
-                {
-                    loader: 'sass-loader',
-                    options: {
-                        sourceMap: true,
-                    }
-                },
-                {
-                    loader: 'postcss-loader'
-                }
-            ]
-        }
-        ]
+                ],
+            },
+        ],
     },
     plugins: [
         new MiniCssExtractPlugin({
