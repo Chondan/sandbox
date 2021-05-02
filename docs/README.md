@@ -5,3 +5,4 @@
 - Adding Images, Fonts, and Files -> https://create-react-app.dev/docs/adding-images-fonts-and-files/
 - What is a tsconfig.json -> https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 - Use Absolute Paths with React -> https://betterprogramming.pub/use-absolute-paths-with-react-51ced66f119f
+    - Need to setup both at `tsconfig.json` and `webpack.common.js`

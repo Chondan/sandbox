@@ -4,9 +4,11 @@
         "es2021": true,
         "node": true
     },
+    "parser": "@typescript-eslint/parser",
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -25,7 +27,13 @@
         "no-multiple-empty-lines": ["error", {
             "max": 1,
             "maxEOF": 1
-        }]
+        }],
+        "react/prop-types": "off"
     },
-    "ignorePatterns": ["**/*.css", "webpack-config"]
+    "ignorePatterns": ["**/*.css", "webpack-config"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }
