@@ -50,7 +50,10 @@ const config = {
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.jsx', '.js', '.wasm', '.mjs', 'cjs', '.json']
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.wasm', '.mjs', 'cjs', '.json'],
+        alias: {
+            "@src": commonPaths.basePathSrc 
+        }
     }
 };
 

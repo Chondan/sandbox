@@ -19,7 +19,11 @@
         "isolatedModules": false,
         "noEmit": false,
         "jsx": "react-jsx",
-        "outDir": "dist"
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "@src/*": ["./src/*"]
+        }
     },
     "include": ["src", "@types"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
