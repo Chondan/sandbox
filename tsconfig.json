@@ -19,6 +19,7 @@
         "isolatedModules": false,
         "noEmit": false,
         "jsx": "react-jsx",
+        "outDir": "dist"
     },
     "include": ["src", "@types"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
