@@ -6,5 +6,6 @@ module.exports = {
     tabWidth: 4,
     endOfLine: 'auto',
     importOrder: ['^@src/(.*)$', '^[./]'],
-    importOrderSeparation: false
+    importOrderSeparation: false,
+    parser: 'typescript'
 };
