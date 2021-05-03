@@ -1,14 +1,17 @@
 {
     "extends": [
         "stylelint-config-standard",
-        "stylelint-config-idiomatic-order"
+        "stylelint-config-idiomatic-order",
+        "stylelint-config-prettier",
+        "stylelint-prettier/recommended"
     ],
     "plugins": [
         "stylelint-order"
     ],
     "rules": {
-        "indentation": "tab",
+        "indentation": null,
         "number-leading-zero": null,
-        "no-missing-end-of-source-newline": null
+        "no-missing-end-of-source-newline": null,
+        "prettier/prettier": true
     }
 }
