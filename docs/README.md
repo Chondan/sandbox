@@ -25,3 +25,4 @@
 - @use JSDoc -> https://jsdoc.app/index.html
     - Visual Studio is now able to generate JSDoc comments
     - just type `/**` above the function
+- Prettier plugin sort imports -> https://www.npmjs.com/package/@trivago/prettier-plugin-sort-imports

@@ -7,5 +7,5 @@ module.exports = {
     endOfLine: 'auto',
     importOrder: ['^@src/(.*)$', '^[./]'],
     importOrderSeparation: false,
-    parser: 'typescript'
+    experimentalBabelParserPluginsList : ["jsx", "typescript"]
 };
