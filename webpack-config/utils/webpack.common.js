@@ -51,9 +51,7 @@ const config = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '.wasm', '.mjs', 'cjs', '.json'],
-        alias: {
-            '@src': commonPaths.basePathSrc,
-        },
+        alias: commonPaths.aliasPath 
     },
 };
 
