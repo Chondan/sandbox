@@ -10,3 +10,12 @@
 - Using lint-staged, husky, and pre-commit hooks to fail fast and early -> https://codeburst.io/continuous-integration-lint-staged-husky-pre-commit-hook-test-setup-47f8172924fc
 - Husky v6 pitfalls -> https://coding.maier.tech/posts/husky-v6-pitfalls/
     - You can add additional hooks manually e.g. create an empty pre-push hook with this command `npx husky add .husky/pre-push` and add the pre-push commands to `.husky/pre-push` file
+- Principles of writing consistent, idiomatic css -> https://github.com/necolas/idiomatic-css#declaration-order
+
+- setup vscode setting to autofix
+```json
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+}
+```
