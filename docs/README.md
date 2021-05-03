@@ -11,7 +11,6 @@
 - Husky v6 pitfalls -> https://coding.maier.tech/posts/husky-v6-pitfalls/
     - You can add additional hooks manually e.g. create an empty pre-push hook with this command `npx husky add .husky/pre-push` and add the pre-push commands to `.husky/pre-push` file
 - Principles of writing consistent, idiomatic css -> https://github.com/necolas/idiomatic-css#declaration-order
-
 - setup vscode setting to autofix at `settings.json`
 ```json
 "editor.codeActionsOnSave": {
@@ -23,3 +22,6 @@
 ```json
     "rulers": [120]
 ```
+- @use JSDoc -> https://jsdoc.app/index.html
+    - Visual Studio is now able to generate JSDoc comments
+    - just type `/**` above the function
