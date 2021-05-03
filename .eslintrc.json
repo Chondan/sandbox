@@ -31,7 +31,9 @@
             "maxEOF": 1
         }],
         "react/prop-types": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": ["error", {
+            "endOfLine": "auto"
+        }]
     },
     "ignorePatterns": ["*.s*[ca]ss", "webpack-config"],
     "settings": {
