@@ -1,6 +1,39 @@
 {
-    "cSpell.words": [
-        "stylelint",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "workbench.iconTheme": "vscode-icons",
+    "indentRainbow.colors": [
+    
+
+        "rgba(255,255,64,0.07)",
+        "rgba(127,255,127,0.07)",
+        "rgba(255,127,255,0.07)",
+        "rgba(79,236,236,0.07)"
+    ],
+    "auto-rename-tag.activationOnLanguage": [
+    
+        "*"
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.formats":[
+        // You can add more
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/dist/css"
+        },
+    ],
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Microsoft",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": true
+    },
+    "files.autoSave": "afterDelay",
+    "cSpell.userWords": [
         "bundleanalyzer"
-    ]
+    ],
+    "editor.rulers": [120],
 }
