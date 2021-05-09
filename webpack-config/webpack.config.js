@@ -34,7 +34,6 @@ module.exports = () => {
     const envObj = turnEnvToObject(env);
     const { mode, addons: addonsArg } = envObj;
 
-    
     const envConfig = require(`./utils/webpack.${mode[0]}.js`);
     const mergedConfig = merge(commonConfig, envConfig, ...addons(addonsArg));
 

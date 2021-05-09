@@ -6,7 +6,7 @@ const config = {
         app: [`${commonPaths.appEntry}/index.js`],
     },
     output: {
-        filename: 'static/[name].[hash].js',
+        filename: 'static/[name].[contenthash].js',
     },
     devtool: 'source-map',
     module: {
@@ -41,7 +41,7 @@ const config = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles/styles.[hash].css',
+            filename: 'styles/styles.[contenthash].css',
         }),
     ],
 };

@@ -7,7 +7,7 @@ const config = {
         app: `${commonPaths.appEntry}/index.js`,
     },
     output: {
-        filename: '[name].[hash].js',
+        filename: '[name].[contenthash].js',
     },
     resolve: {
         alias: {
